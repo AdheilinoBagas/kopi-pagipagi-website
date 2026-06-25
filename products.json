@@ -97,9 +97,9 @@
   ],
   "settings": {
     "whatsapp": "6281217219682",
-    "googleDriveFolder": "1CLUJT9-atzt9n1RQ8As5ouNsJlueRVi3",
-    "googleSheetsId": "1w8SbsIeQ_0VsC2JhgeOKe-jhhvH0pUMmz2dSB6fJRRY",
-    "googleApiKey": "AIzaSyCs6D0Apwjf92avqbI_z5aPEJLk25s8Yd8",
+    "googleDriveFolder": "",
+    "googleSheetsId": "",
+    "googleApiKey": "",
     "imageBasePath": "images/"
   }
 }
