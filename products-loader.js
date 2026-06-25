@@ -56,8 +56,8 @@ class ProductsLoader {
     const apiKey = this.settings.googleApiKey;
     
     // Google Sheets API endpoint - using the actual sheet name
-    const sheetName = encodeURIComponent('Kopi Pagi Pagi - Produk Database');
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!A2:J1000?key=${apiKey}`;
+    const sheetName = encodeURIComponent('Kopi Pagi Pagi - Produk Database V2');
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!A2:K1000?key=${apiKey}`;
     
     try {
       const response = await fetch(url);
@@ -78,10 +78,10 @@ class ProductsLoader {
           en: row[4] || row[3] || ''
         },
         price: row[5] || '',
-        category: row[6] || 'personal',
-        image: row[7] || '',
-        featured: row[8]?.toLowerCase() === 'yes' || row[8]?.toLowerCase() === 'ya',
-        status: row[9]?.toLowerCase() || 'active'
+        category: row[6]?.toLowerCase() || 'personal',
+        image: row[8] || row[7] || '', // Use Column I (Drive ID) or fallback to Column H (filename)
+        featured: row[9]?.toLowerCase() === 'yes' || row[9]?.toLowerCase() === 'ya',
+        status: row[10]?.toLowerCase() || 'active'
       })).filter(p => p.status === 'active');
 
       return {
