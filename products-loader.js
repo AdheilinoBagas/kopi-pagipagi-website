@@ -55,8 +55,9 @@ class ProductsLoader {
     const sheetId = this.settings.googleSheetsId;
     const apiKey = this.settings.googleApiKey;
     
-    // Google Sheets API endpoint
-    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/Products!A2:J1000?key=${apiKey}`;
+    // Google Sheets API endpoint - using the actual sheet name
+    const sheetName = encodeURIComponent('Kopi Pagi Pagi - Produk Database');
+    const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}/values/${sheetName}!A2:J1000?key=${apiKey}`;
     
     try {
       const response = await fetch(url);
