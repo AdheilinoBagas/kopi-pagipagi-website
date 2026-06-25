@@ -162,3 +162,7 @@ error.log
 # *.mov
 # *.avi
 # large-files/
+
+.dev.vars*
+!.dev.vars.example
+!.env.example
