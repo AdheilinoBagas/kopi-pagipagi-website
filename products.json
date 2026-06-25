@@ -1,0 +1,105 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": {
+        "id": "Hampers Korporat Premium",
+        "en": "Premium Corporate Hamper"
+      },
+      "description": {
+        "id": "Hampers eksklusif untuk klien dan mitra bisnis. Termasuk bamboo tumbler, organiser kulit, dan camilan organik.",
+        "en": "Exclusive hampers for clients and business partners. Includes bamboo tumbler, leather organizer, and organic snacks."
+      },
+      "price": "Rp 350.000",
+      "category": "corporate",
+      "image": "product-corporate.webp",
+      "featured": true,
+      "status": "active"
+    },
+    {
+      "id": 2,
+      "name": {
+        "id": "Tumbler Bouquet",
+        "en": "Tumbler Bouquet"
+      },
+      "description": {
+        "id": "Tumbler bamboo dengan rangkaian bunga kering yang cantik. Hadiah sempurna untuk orang tersayang.",
+        "en": "Bamboo tumbler with beautiful dried flower arrangement. The perfect gift for your loved ones."
+      },
+      "price": "Rp 185.000",
+      "category": "personal",
+      "image": "product-tumbler.webp",
+      "featured": true,
+      "status": "active"
+    },
+    {
+      "id": 3,
+      "name": {
+        "id": "Hampers Pernikahan Elegan",
+        "en": "Elegant Wedding Hamper"
+      },
+      "description": {
+        "id": "Hampers pernikahan dengan kemasan zero waste. Ceramic mug, sabun organik, dan succulent cantik.",
+        "en": "Wedding hampers with zero waste packaging. Ceramic mug, organic soap, and beautiful succulent."
+      },
+      "price": "Rp 275.000",
+      "category": "wedding",
+      "image": "product-wedding.webp",
+      "featured": true,
+      "status": "active"
+    },
+    {
+      "id": 4,
+      "name": {
+        "id": "Custom Branded Gift Set",
+        "en": "Custom Branded Gift Set"
+      },
+      "description": {
+        "id": "Set hadiah dengan logo perusahaan Anda. Tumbler, sedotan bamboo, dan teh organik dalam pouch kraft.",
+        "en": "Gift set with your company logo. Tumbler, bamboo straw, and organic tea in kraft pouch."
+      },
+      "price": "Rp 225.000",
+      "category": "corporate",
+      "image": "product-custom.webp",
+      "featured": false,
+      "status": "active"
+    }
+  ],
+  "categories": [
+    {
+      "id": "all",
+      "name": {
+        "id": "Semua",
+        "en": "All"
+      }
+    },
+    {
+      "id": "corporate",
+      "name": {
+        "id": "Korporat",
+        "en": "Corporate"
+      }
+    },
+    {
+      "id": "personal",
+      "name": {
+        "id": "Personal",
+        "en": "Personal"
+      }
+    },
+    {
+      "id": "wedding",
+      "name": {
+        "id": "Pernikahan",
+        "en": "Wedding"
+      }
+    }
+  ],
+  "settings": {
+    "whatsapp": "6281217219682",
+    "googleDriveFolder": "17Th3Uiety3iE2-9feQfsqtqFzxJ_NQKk?usp=sharing",
+    "googleSheetsId": "1yIGJGMAJkPj6kDTdplr-ypF5RC7eB4KnLpmG-9yuUxE",
+    "googleApiKey": "AIzaSyCHZrDjn98_8bWGnHp987061KbpiXBu6RU",
+    "imageBasePath": "images/"
+  }
+}
