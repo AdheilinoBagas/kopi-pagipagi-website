@@ -154,10 +154,3 @@ vercel --prod
 ## 📄 License
 
 © 2026 Kopi Pagi Pagi. All rights reserved.
-
-## 🤝 Support
-
-For questions or issues:
-- Email: kopi.bangunpagi@gmail.com
-- WhatsApp: +62 812-1721-9682
-- Instagram: @kopi.pagipagi
