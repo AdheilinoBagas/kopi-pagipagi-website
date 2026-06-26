@@ -65,9 +65,9 @@ const productsLoader = new ProductsLoader({
 In `script.js`, update these constants:
 
 ```javascript
-const WHATSAPP_NUMBER = '6281217219682';
-const INSTAGRAM_HANDLE = 'kopi.pagipagi';
-const EMAIL_ADDRESS = 'kopi.bangunpagi@gmail.com';
+const WHATSAPP_NUMBER = 'YOUR_WHATSAPP_NUMBER';
+const INSTAGRAM_HANDLE = 'YOUR_INSTAGRAM_HANDLE';
+const EMAIL_ADDRESS = 'YOUR_EMAIL_ADDRESS';
 ```
 
 ## 📊 Google Sheets Structure
@@ -81,9 +81,9 @@ const EMAIL_ADDRESS = 'kopi.bangunpagi@gmail.com';
 | E | Description (EN) | Exclusive hampers... |
 | F | Price | Rp 350.000 |
 | G | Category | corporate |
-| H | Image | product-corporate.webp |
+| H | Image | product-corporate.webp (fallback) |
 | I | Google Drive Image ID | Google Drive file ID (primary) |
-| J | Featured | Is featured product? | YES, NO, ya, TRUE, FALSE |
+| J | Featured | Is featured product? | YES, NO |
 | K | Status | Product status | active, inactive |
 
 ## 🎨 Customization
