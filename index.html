@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi Pagi Pagi — Eco-Friendly Custom Hampers</title>
+  <meta name="description" content="Premium eco-friendly custom hampers and gifts. Zero waste, sustainable packaging for corporate and personal gifting.">
+  <meta name="keywords" content="hampers, eco-friendly, custom gifts, sustainable, zero waste, corporate gifts, Indonesia">
+  <meta property="og:title" content="Kopi Pagi Pagi — Eco-Friendly Custom Hampers">
+  <meta property="og:description" content="Premium eco-friendly custom hampers with zero waste packaging.">
+  <meta property="og:image" content="images/hero.webp">
+  <link rel="icon" href="images/icon2.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar-inner">
+      <a href="#home" class="navbar-logo">
+        <img src="images/logo.png" alt="Kopi Pagi Pagi" class="navbar-logo-img">
+      </a>
+      <div class="navbar-links" id="navLinks">
+        <a href="#home" data-i18n="nav.home">Beranda</a>
+        <a href="#about" data-i18n="nav.about">Tentang</a>
+        <a href="#products" data-i18n="nav.products">Produk</a>
+        <a href="#gallery" data-i18n="nav.gallery">Galeri</a>
+        <a href="#testimonials" data-i18n="nav.testimonials">Testimoni</a>
+        <a href="#contact" data-i18n="nav.contact">Kontak</a>
+      </div>
+      <div class="navbar-actions">
+        <button class="btn-lang" id="themeToggle" title="Toggle dark mode">☀️</button>
+        <button class="btn-lang" id="langToggle" title="Switch language">EN</button>
+        <a href="https://wa.me/6281217219682?text=Halo%20Kopi%20Pagi%20Pagi%2C%20saya%20tertarik%20dengan%20hampers%20Anda" target="_blank" class="btn btn-primary btn-sm navbar-cta" data-i18n="nav.orderNow">Pesan Sekarang</a>
+        <button class="btn-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile Menu -->
+    <div class="navbar-mobile" id="mobileMenu">
+      <a href="#home" data-i18n="nav.home">Beranda</a>
+      <a href="#about" data-i18n="nav.about">Tentang</a>
+      <a href="#products" data-i18n="nav.products">Produk</a>
+      <a href="#gallery" data-i18n="nav.gallery">Galeri</a>
+      <a href="#testimonials" data-i18n="nav.testimonials">Testimoni</a>
+      <a href="#contact" data-i18n="nav.contact">Kontak</a>
+      <a href="https://wa.me/6281217219682?text=Halo%20Kopi%20Pagi%20Pagi%2C%20saya%20tertarik%20dengan%20hampers%20Anda" target="_blank" class="btn btn-primary btn-block" data-i18n="nav.orderNow">Pesan Sekarang</a>
+    </div>
+  </nav>
+
+  <!-- ========== HERO ========== -->
+  <section id="home" class="hero">
+    <!-- Left: Text Content -->
+    <div class="hero-text-side">
+      <div class="hero-content">
+        <span class="badge" data-i18n="hero.badge">🌿 Eco-Friendly Hampers & Gifts</span>
+        <h1 class="hero-title">
+          <span data-i18n="hero.title1">Hadirkan Kebahagiaan</span><br>
+          <span class="text-primary" data-i18n="hero.title2">dengan Hadiah Berkelanjutan</span>
+        </h1>
+        <p class="hero-desc" data-i18n="hero.description">Hampers ramah lingkungan dengan kemasan zero waste. Setiap produk kami dibuat dengan cinta untuk bumi dan orang tersayang.</p>
+        <div class="hero-ctas">
+          <a href="#products" class="btn btn-primary btn-lg">
+            <span data-i18n="hero.ctaPrimary">Lihat Koleksi</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/6281217219682?text=Halo%20Kopi%20Pagi%20Pagi%2C%20saya%20tertarik%20dengan%20hampers%20Anda" target="_blank" class="btn btn-outline-primary btn-lg">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <span data-i18n="hero.ctaSecondary">Pesan via WhatsApp</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hero-stat">500+ <span data-i18n="hero.statLabel1">Hampers Terkirim</span></div>
+          <div class="hero-stat">✨ Fast Custom Service</div>
+          <div class="hero-stat">🎁 Premium Packaging</div>
+          <div class="hero-stat">📦 Bulk Orders Welcome</div>
+        </div>
+      </div>
+    </div>
+    <!-- Right: Image -->
+    <div class="hero-image-side">
+      <img src="images/hero.webp" alt="Eco-friendly hampers">
+    </div>
+    <!-- Bottom fade -->
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section id="about" class="section about-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="badge" data-i18n="about.badge">Tentang Kami</span>
+        <h2 class="section-title" data-i18n="about.title">Kopi Pagi Pagi Custom Hampers</h2>
+      </div>
+      <div class="about-grid">
+        <div class="about-image animate-on-scroll">
+          <img src="images/about.webp" alt="About Kopi Pagi Pagi">
+          <div class="about-image-border"></div>
+        </div>
+        <div class="about-text animate-on-scroll">
+          <p data-i18n="about.description1">Kami percaya bahwa memberikan hadiah tidak harus merusak lingkungan. Kopi Pagi Pagi hadir sebagai solusi hampers ramah lingkungan yang tetap elegan dan berkesan.</p>
+          <p data-i18n="about.description2">Setiap hampers kami dikemas dengan material daur ulang dan dapat terurai, tanpa mengurangi keindahan dan kualitas. Dari bamboo tumbler hingga kemasan kraft paper — semua dipilih dengan cermat.</p>
+          <div class="mission-grid">
+            <div class="mission-card">
+              <div class="mission-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/><polyline points="22 2 22 8 16 8"/></svg>
+              </div>
+              <h3 data-i18n="about.mission1Title">Zero Waste</h3>
+              <p data-i18n="about.mission1Desc">Kemasan 100% dapat terurai dan ramah lingkungan</p>
+            </div>
+            <div class="mission-card">
+              <div class="mission-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </div>
+              <h3 data-i18n="about.mission2Title">Handcrafted</h3>
+              <p data-i18n="about.mission2Desc">Setiap hampers dirangkai dengan tangan penuh cinta</p>
+            </div>
+            <div class="mission-card">
+              <div class="mission-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M17 2H7a5 5 0 000 10h10a5 5 0 000-10z"/><path d="M12 12v9"/><path d="M8 21h8"/></svg>
+              </div>
+              <h3 data-i18n="about.mission3Title">Customizable</h3>
+              <p data-i18n="about.mission3Desc">Sesuaikan isi dan desain sesuai kebutuhan Anda</p>
+            </div>
+            <div class="mission-card">
+              <div class="mission-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L12 14l-2 6h4l2-6"/><path d="M2 2l7.58 7.58"/><circle cx="12" cy="8" r="2"/></svg>
+              </div>
+              <h3 data-i18n="about.mission4Title">Sustainable</h3>
+              <p data-i18n="about.mission4Desc">Mendukung #PlasticFree & #SustainableLiving</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PRODUCTS ========== -->
+  <section id="products" class="section products-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="badge" data-i18n="products.badge">Produk Kami</span>
+        <h2 class="section-title" data-i18n="products.title">Koleksi Hampers Pilihan</h2>
+        <p class="section-desc" data-i18n="products.description">Pilihan hampers terbaik untuk berbagai momen spesial. Semua produk kami menggunakan material ramah lingkungan.</p>
+      </div>
+      <div class="product-filters animate-on-scroll">
+        <button class="filter-btn active" data-filter="all" data-i18n="products.catAll">Semua</button>
+        <button class="filter-btn" data-filter="corporate" data-i18n="products.catCorporate">Korporat</button>
+        <button class="filter-btn" data-filter="personal" data-i18n="products.catPersonal">Personal</button>
+        <button class="filter-btn" data-filter="wedding" data-i18n="products.catWedding">Pernikahan</button>
+      </div>
+      <div class="product-carousel">
+        <button class="product-nav product-nav-prev" id="productPrev" aria-label="Previous product" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="product-grid" id="productGrid">
+          <!-- Product 1 -->
+          <div class="product-card animate-on-scroll" data-category="corporate">
+            <div class="product-image">
+              <img src="images/product-corporate.webp" alt="Hampers Korporat Premium">
+              <span class="product-badge">⭐ Featured</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-name" data-id="Hampers Korporat Premium" data-en="Premium Corporate Hamper">Hampers Korporat Premium</h3>
+              <p class="product-desc" data-id="Hampers eksklusif untuk klien dan mitra bisnis. Termasuk bamboo tumbler, organiser kulit, dan camilan organik." data-en="Exclusive hampers for clients and business partners. Includes bamboo tumbler, leather organizer, and organic snacks.">Hampers eksklusif untuk klien dan mitra bisnis. Termasuk bamboo tumbler, organiser kulit, dan camilan organik.</p>
+              <div class="product-price">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                <span data-i18n="products.startFrom">Mulai dari</span> Rp 350.000
+              </div>
+              <a href="https://wa.me/6281217219682?text=Halo%20Kopi%20Pagi%20Pagi%2C%20saya%20tertarik%20dengan%20Hampers%20Korporat%20Premium" target="_blank" class="btn btn-primary btn-block">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                <span data-i18n="products.orderViaWa">Pesan via WhatsApp</span>
+              </a>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div class="product-card animate-on-scroll" data-category="personal">
+            <div class="product-image">
+              <img src="images/product-tumbler.webp" alt="Tumbler Bouquet">
+              <span class="product-badge">⭐ Featured</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-name" data-id="Tumbler Bouquet" data-en="Tumbler Bouquet">Tumbler Bouquet</h3>
+              <p class="product-desc" data-id="Tumbler bamboo dengan rangkaian bunga kering yang cantik. Hadiah sempurna untuk orang tersayang." data-en="Bamboo tumbler with beautiful dried flower arrangement. The perfect gift for your loved ones.">Tumbler bamboo dengan rangkaian bunga kering yang cantik. Hadiah sempurna untuk orang tersayang.</p>
+              <div class="product-price">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                <span data-i18n="products.startFrom">Mulai dari</span> Rp 185.000
+              </div>
+              <a href="https://wa.me/6281217219682?text=Halo%20Kopi%20Pagi%20Pagi%2C%20saya%20tertarik%20dengan%20Tumbler%20Bouquet" target="_blank" class="btn btn-primary btn-block">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                <span data-i18n="products.orderViaWa">Pesan via WhatsApp</span>
+              </a>
+            </div>
+          </div>
+          <!-- Product 3 -->
+          <div class="product-card animate-on-scroll" data-category="wedding">
+            <div class="product-image">
+              <img src="images/product-wedding.webp" alt="Hampers Pernikahan Elegan">
+              <span class="product-badge">⭐ Featured</span>
+            </div>
+            <div class="product-body">
+              <h3 class="product-name" data-id="Hampers Pernikahan Elegan" data-en="Elegant Wedding Hamper">Hampers Pernikahan Elegan</h3>
+              <p class="product-desc" data-id="Hampers pernikahan dengan kemasan zero waste. Ceramic mug, sabun organik, dan succulent cantik." data-en="Wedding hampers with zero waste packaging. Ceramic mug, organic soap, and beautiful succulent.">Hampers pernikahan dengan kemasan zero waste. Ceramic mug, sabun organik, dan succulent cantik.</p>
+              <div class="product-price">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                <span data-i18n="products.startFrom">Mulai dari</span> Rp 275.000
+              </div>
+              <a href="https://wa.me/6281217219682?text=Halo%20Kopi%20Pagi%20Pagi%2C%20saya%20tertarik%20dengan%20Hampers%20Pernikahan%20Elegan" target="_blank" class="btn btn-primary btn-block">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                <span data-i18n="products.orderViaWa">Pesan via WhatsApp</span>
+              </a>
+            </div>
+          </div>
+          <!-- Product 4 -->
+          <div class="product-card animate-on-scroll" data-category="corporate">
+            <div class="product-image">
+              <img src="images/product-custom.webp" alt="Custom Branded Gift Set">
+            </div>
+            <div class="product-body">
+              <h3 class="product-name" data-id="Custom Branded Gift Set" data-en="Custom Branded Gift Set">Custom Branded Gift Set</h3>
+              <p class="product-desc" data-id="Set hadiah dengan logo perusahaan Anda. Tumbler, sedotan bamboo, dan teh organik dalam pouch kraft." data-en="Gift set with your company logo. Tumbler, bamboo straw, and organic tea in kraft pouch.">Set hadiah dengan logo perusahaan Anda. Tumbler, sedotan bamboo, dan teh organik dalam pouch kraft.</p>
+              <div class="product-price">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                <span data-i18n="products.startFrom">Mulai dari</span> Rp 225.000
+              </div>
+              <a href="https://wa.me/6281217219682?text=Halo%20Kopi%20Pagi%20Pagi%2C%20saya%20tertarik%20dengan%20Custom%20Branded%20Gift%20Set" target="_blank" class="btn btn-primary btn-block">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                <span data-i18n="products.orderViaWa">Pesan via WhatsApp</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <button class="product-nav product-nav-next" id="productNext" aria-label="Next product" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY ========== -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="badge" data-i18n="gallery.badge">Galeri Kami</span>
+        <h2 class="section-title" data-i18n="gallery.title">Inspirasi Hampers Kami</h2>
+        <p class="section-desc" data-i18n="gallery.description">Lihat koleksi karya kami yang telah membawa kebahagiaan ke berbagai acara.</p>
+      </div>
+      <div class="gallery-grid animate-on-scroll">
+        <div class="gallery-item gallery-item-large" onclick="openLightbox(this)">
+          <img src="images/hero.webp" alt="Eco-friendly hampers">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/gallery-1.webp" alt="Koleksi hampers premium">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/product-corporate.webp" alt="Hampers korporat">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/gallery-2.webp" alt="Hampers ulang tahun">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/product-tumbler.webp" alt="Tumbler bouquet">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/gallery-3.webp" alt="Stasiun kemasan sustainable">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/product-wedding.webp" alt="Hampers pernikahan">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/gallery-4.webp" alt="Pengiriman hampers">
+        </div>
+        <div class="gallery-item" onclick="openLightbox(this)">
+          <img src="images/product-custom.webp" alt="Custom branded gift">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img src="" alt="Gallery image" id="lightboxImg">
+  </div>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section id="testimonials" class="section testimonials-section">
+    <div class="container">
+      <div class="section-header animate-on-scroll">
+        <span class="badge" data-i18n="testimonials.badge">Testimoni</span>
+        <h2 class="section-title" data-i18n="testimonials.title">Apa Kata Mereka?</h2>
+        <p class="section-desc" data-i18n="testimonials.description">Kepuasan pelanggan adalah prioritas utama kami.</p>
+      </div>
+      <div class="testimonial-wrapper">
+        <button class="testimonial-nav testimonial-nav-prev" id="testimonialPrev" aria-label="Previous testimonial" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="testimonial-grid" id="testimonialGrid">
+          <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">❝</div>
+          <p data-i18n="testimonial.1">Rapi banget packagingnya. Bubble wrapnya super rapi. Terus udh dibungkus jg kardusnya, dikasi pita jg, dalem kardusnya jg udh dikasi yg sobekan2nya itu. Ini udh ready bgt lah pokoknya kl mau dipake buat gift👍🏻 seller jg sangat responsive😊 makasih seller. Sukses terus ya😊</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">B</div>
+            <div><strong>b*****t</strong></div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">❝</div>
+          <p data-i18n="testimonial.2">makasih admin sdh mau direpotin buat bikin requestn custom form tulisan dll, semuanya keren jadi ga berani bongkar semua soalnya buat kado temen makasih bnyk skli lagi😍💕</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">H</div>
+            <div><strong>hayatunthoiyibah</strong></div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">❝</div>
+          <p data-i18n="testimonial.3">Tulisan sesuai dengan keinginan saya. Respon cepat dan sangat baik.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">W</div>
+            <div><strong>wpriyati</strong></div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">❝</div>
+          <p data-i18n="testimonial.4">sangat puas. pesan untuk acara kantor 30 pcs, barang jadi sesuai desain, packing aman dan pengerjaan sesuai target</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">B</div>
+            <div><strong>Bayu</strong></div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">❝</div>
+          <p data-i18n="testimonial.5">Bagus banget sesuai ekspektasi 👍 Seller nya pun fast respon dan ramah. terimakasih, sukses selalu seller.</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div><strong>Astika</strong></div>
+          </div>
+        </div>
+        <div class="testimonial-card animate-on-scroll">
+          <div class="testimonial-stars">★★★★★</div>
+          <div class="testimonial-quote">❝</div>
+          <p data-i18n="testimonial.6">Hasilnya bagus sesuai permintaan walau jumlah banyak (quality control ok), packing rapi dan kartunya bisa custom. Seller ramah :-) thank you!</p>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div><strong>R***a</strong></div>
+          </div>
+        </div>
+        </div>
+        <button class="testimonial-nav testimonial-nav-next" id="testimonialNext" aria-label="Next testimonial" type="button">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-left animate-on-scroll">
+          <span class="badge" data-i18n="contact.badge">Hubungi Kami</span>
+          <h2 class="section-title" data-i18n="contact.title">Siap Membuat Hampers Impian Anda?</h2>
+          <p class="section-desc" data-i18n="contact.description">Hubungi kami melalui WhatsApp untuk konsultasi dan pemesanan. Kami siap membantu Anda membuat hampers yang sempurna!</p>
+          <div class="contact-ctas">
+            <a href="https://wa.me/6281217219682?text=Halo%20Kopi%20Pagi%20Pagi%2C%20saya%20tertarik%20dengan%20hampers%20Anda" target="_blank" class="btn btn-whatsapp btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+              <span data-i18n="contact.ctaWa">Chat via WhatsApp</span>
+            </a>
+            <a href="https://instagram.com/kopi.pagipagi" target="_blank" class="btn btn-outline-primary btn-lg">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              <span data-i18n="contact.ctaIg">Follow Instagram</span>
+            </a>
+          </div>
+          <div class="contact-cards">
+            <div class="contact-card">
+              <div class="contact-card-icon icon-whatsapp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <small data-i18n="contact.infoWa">WhatsApp</small>
+                <strong>+62 812-1721-9682</strong>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon icon-instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+              </div>
+              <div>
+                <small data-i18n="contact.infoIg">Instagram</small>
+                <strong>@kopi.pagipagi</strong>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon icon-email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <small data-i18n="contact.infoEmail">Email</small>
+                <strong>kopi.bangunpagi@gmail.com</strong>
+              </div>
+            </div>
+            <div class="contact-card">
+              <div class="contact-card-icon icon-location">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <small data-i18n="contact.infoLocation">Lokasi</small>
+                <strong data-i18n="contact.locationValue">Indonesia</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contact-right animate-on-scroll">
+          <div class="impact-card">
+            <div class="impact-icon">🌿</div>
+            <h3 data-i18n="contact.impactTitle">Setiap Pesanan Membawa Dampak</h3>
+            <p data-i18n="contact.impactDesc">Bergabunglah dengan kami dalam mendukung kehidupan berkelanjutan</p>
+            <div class="impact-stats">
+              <div class="impact-stat">
+                <strong>500+</strong>
+                <span>Hampers</span>
+              </div>
+              <div class="impact-stat">
+                <strong>0%</strong>
+                <span data-id="Plastik" data-en="Plastic">Plastik</span>
+              </div>
+              <div class="impact-stat">
+                <strong>100%</strong>
+                <span>Eco</span>
+              </div>
+            </div>
+            <div class="impact-hours">
+              <div class="impact-hours-title">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span data-i18n="contact.hoursTitle">Jam Operasional</span>
+              </div>
+              <p data-i18n="contact.hoursWeekday">Senin - Jumat: 09:00 - 17:00</p>
+              <p data-i18n="contact.hoursWeekend">Sabtu: 09:00 - 14:00</p>
+            </div>
+          </div>
+          <div class="impact-card-border"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="Kopi Pagi Pagi" class="footer-logo">
+          <p data-i18n="footer.tagline">Hampers ramah lingkungan untuk momen spesial Anda.</p>
+          <div class="footer-socials">
+            <a href="https://wa.me/6281217219682" target="_blank" class="social-link" aria-label="WhatsApp">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </a>
+            <a href="https://instagram.com/kopi.pagipagi" target="_blank" class="social-link" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.quickLinks">Tautan Cepat</h4>
+          <a href="#home" data-i18n="nav.home">Beranda</a>
+          <a href="#about" data-i18n="nav.about">Tentang</a>
+          <a href="#products" data-i18n="nav.products">Produk</a>
+          <a href="#gallery" data-i18n="nav.gallery">Galeri</a>
+          <a href="#testimonials" data-i18n="nav.testimonials">Testimoni</a>
+          <a href="#contact" data-i18n="nav.contact">Kontak</a>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.products">Produk</h4>
+          <a href="#products" data-id="Hampers Korporat Premium" data-en="Premium Corporate Hamper">Hampers Korporat Premium</a>
+          <a href="#products" data-id="Tumbler Bouquet" data-en="Tumbler Bouquet">Tumbler Bouquet</a>
+          <a href="#products" data-id="Hampers Pernikahan Elegan" data-en="Elegant Wedding Hamper">Hampers Pernikahan Elegan</a>
+          <a href="#products" data-id="Custom Branded Gift Set" data-en="Custom Branded Gift Set">Custom Branded Gift Set</a>
+        </div>
+        <div class="footer-links">
+          <h4 data-i18n="footer.connect">Terhubung</h4>
+          <a href="https://wa.me/6281217219682" target="_blank">WhatsApp</a>
+          <a href="https://instagram.com/kopi.pagipagi" target="_blank">@kopi.pagipagi</a>
+          <a href="mailto:kopi.bangunpagi@gmail.com">kopi.bangunpagi@gmail.com</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Kopi Pagi Pagi. <span data-i18n="footer.rights">Semua hak dilindungi.</span></p>
+        <p data-i18n="footer.ecoTag">Dibuat dengan 🌿 untuk bumi</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="products-loader.js"></script>
+  <script src="script.js"></script>
+  <script>
+    // Initialize ProductsLoader with Google Sheets configuration
+    window.productsLoader = new ProductsLoader({
+      googleSheetsId: '1w8SbsIeQ_0VsC2JhgeOKe-jhhvH0pUMmz2dSB6fJRRY',
+      googleApiKey: 'AIzaSyCs6D0Apwjf92avqbI_z5aPEJLk25s8Yd8',
+      googleDriveFolder: '1CLUJT9-atzt9n1RQ8As5ouNsJlueRVi3'
+    });
+
+    // Load and render products when page loads
+    document.addEventListener('DOMContentLoaded', async () => {
+      console.log('🚀 Starting products load...');
+      const success = await window.productsLoader.init();
+      if (success) {
+        // Render category filters dynamically
+        window.productsLoader.renderCategoryFilters();
+        console.log('✅ Category filters rendered');
+        
+        // Render products
+        window.productsLoader.renderProducts();
+        console.log('✅ Products rendered successfully');
+        
+        // Re-initialize product filter and carousel after rendering
+        if (typeof initProductFilter === 'function') initProductFilter();
+        if (typeof initProductCarousel === 'function') initProductCarousel();
+        if (typeof initScrollAnimations === 'function') initScrollAnimations();
+      } else {
+        console.error('❌ Failed to render products');
+      }
+    });
+  </script>
+</body>
+</html>
