@@ -21,7 +21,7 @@ const allCategories = [{id: 'all', name: {id: 'Semua', en: 'All'}}, ...categorie
     </div>
     <div class="product-filters animate-on-scroll">
       {allCategories.map((cat: any, i: number) => (
-        <button class={`filter-btn${i === 0 ? ' active' : ''}`} data-filter={cat.id} data-id={cat.name?.id} data-en={cat.name?.en}>{cat.name?.id}</button>
+        <button class={`filter-btn${i === 0 ? ' active' : ''}`} data-filter={cat.slug?.current || cat.id} data-id={cat.name?.id} data-en={cat.name?.en}>{cat.name?.id}</button>
       ))}
     </div>
     <div class="product-carousel">
