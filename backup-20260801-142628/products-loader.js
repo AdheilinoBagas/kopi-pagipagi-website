@@ -240,7 +240,6 @@ class ProductsLoader {
     if (!container) return;
 
     const products = this.getProductsByCategory(category);
-    const attr = (s) => String(s || "").replace(/&/g, "&amp;").replace(/"/g, "&quot;");
     
     container.innerHTML = products.map(product => `
       <div class="product-card animate-on-scroll" data-category="${product.category}">
@@ -249,8 +248,8 @@ class ProductsLoader {
           ${product.featured ? '<span class="product-badge">⭐ Featured</span>' : ''}
         </div>
         <div class="product-body">
-          <h3 class="product-name" data-id="${attr(product.name.id)}" data-en="${attr(product.name.en)}">${this.getText(product.name)}</h3>
-          <p class="product-desc" data-id="${attr(product.description.id)}" data-en="${attr(product.description.en)}">${this.getText(product.description)}</p>
+          <h3 class="product-name">${this.getText(product.name)}</h3>
+          <p class="product-desc">${this.getText(product.description)}</p>
           <div class="product-price">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/>
@@ -272,10 +271,6 @@ class ProductsLoader {
     // Re-trigger scroll animations
     if (typeof initScrollAnimations === 'function') {
       initScrollAnimations();
-    }
-
-    if (typeof applyLanguage === 'function') {
-      applyLanguage(localStorage.getItem("kopi-pagi-pagi-lang") || "id");
     }
   }
 

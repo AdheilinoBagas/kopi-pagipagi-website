@@ -15,16 +15,16 @@ const translations = {
   'nav.contact':       { id: 'Kontak', en: 'Contact' },
   'nav.orderNow':      { id: 'Pesan Sekarang', en: 'Order Now' },
   'hero.badge':        { id: '🌿 Eco-Friendly Hampers & Gifts', en: '🌿 Eco-Friendly Hampers & Gifts' },
-  'hero.title1':       { id: 'Hadiah yang Hangat di Hati,', en: 'Warm on the Heart,' },
-  'hero.title2':       { id: 'Ringan untuk Bumi', en: 'Light on the Earth' },
-  'hero.description':  { id: 'Hampers custom ramah lingkungan dengan kemasan zero waste. Dirangkai tangan untuk orang tersayang — dan untuk bumi tempat kita tinggal.', en: 'Eco-friendly custom hampers with zero-waste packaging. Handcrafted for the people you love — and for the planet we share.' },
+  'hero.title1':       { id: 'Hadirkan Kebahagiaan', en: 'Deliver Happiness' },
+  'hero.title2':       { id: 'dengan Hadiah Berkelanjutan', en: 'with Sustainable Gifts' },
+  'hero.description':  { id: 'Hampers ramah lingkungan dengan kemasan zero waste. Setiap produk kami dibuat dengan cinta untuk bumi dan orang tersayang.', en: 'Eco-friendly hampers with zero waste packaging. Every product is crafted with love for the earth and your loved ones.' },
   'hero.ctaPrimary':   { id: 'Lihat Koleksi', en: 'View Collection' },
   'hero.ctaSecondary': { id: 'Pesan via WhatsApp', en: 'Order via WhatsApp' },
   'hero.statLabel1':   { id: 'Hampers Terkirim', en: 'Hampers Delivered' },
   'about.badge':         { id: 'Tentang Kami', en: 'About Us' },
-  'about.title':         { id: 'Kehangatan yang Dirangkai Tangan', en: 'Warmth, Handcrafted' },
-  'about.description1':  { id: 'Semuanya berawal dari hal sederhana: secangkir kopi hangat di pagi hari. Momen kecil yang membuat hari terasa lebih hangat — cara diam-diam untuk berkata "kamu berharga".', en: "It all began with something simple: a cup of coffee in the morning. A small moment that makes the day feel warmer — a quiet way of saying you matter." },
-  'about.description2':  { id: 'Itulah rasa yang kami titipkan lewat setiap hampers — cara untuk berkata "aku ingat kamu", tanpa meninggalkan sampah untuk bumi. Setiap kotak dirangkai dengan tangan dari material yang dapat terurai.', en: 'That is the feeling we tuck into every hamper — a way to say "I remember you", without leaving waste behind. Each box is arranged by hand from materials that return to the earth.' },
+  'about.title':         { id: 'Kopi Pagi Pagi Custom Hampers', en: 'Kopi Pagi Pagi Custom Hampers' },
+  'about.description1':  { id: 'Kami percaya bahwa memberikan hadiah tidak harus merusak lingkungan. Kopi Pagi Pagi hadir sebagai solusi hampers ramah lingkungan yang tetap elegan dan berkesan.', en: "We believe that giving gifts shouldn't harm the environment. Kopi Pagi Pagi offers eco-friendly hampers that remain elegant and memorable." },
+  'about.description2':  { id: 'Setiap hampers kami dikemas dengan material daur ulang dan dapat terurai, tanpa mengurangi keindahan dan kualitas. Dari bamboo tumbler hingga kemasan kraft paper — semua dipilih dengan cermat.', en: 'Every hamper is packaged with recycled and biodegradable materials, without compromising beauty and quality. From bamboo tumblers to kraft paper packaging — all carefully selected.' },
   'about.mission1Title': { id: 'Zero Waste', en: 'Zero Waste' },
   'about.mission1Desc':  { id: 'Kemasan 100% dapat terurai dan ramah lingkungan', en: '100% biodegradable and eco-friendly packaging' },
   'about.mission2Title': { id: 'Handcrafted', en: 'Handcrafted' },
@@ -177,7 +177,7 @@ function initSmoothScroll() {
 }
 
 
-// ─── PRODUCT FILTER ─────────────────────
+// ─── PRODUCT FILTER ──────────────────────
 function initProductFilter() {
   const filterBtns = document.querySelectorAll('.filter-btn');
   const productCards = document.querySelectorAll('.product-card');
