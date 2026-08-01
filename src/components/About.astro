@@ -1,0 +1,59 @@
+---
+import {urlFor} from '../lib/image'
+
+interface Props {
+  aboutSection: any
+}
+
+const {aboutSection} = Astro.props
+const about = aboutSection || {}
+const aboutImageUrl = about.aboutImage ? urlFor(about.aboutImage).width(800).url() : '/images/about.webp'
+
+const missionIcons = [
+  '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12a9 9 0 11-6.219-8.56"/><polyline points="22 2 22 8 16 8"/></svg>',
+  '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>',
+  '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="13.5" cy="6.5" r="2.5"/><path d="M17 2H7a5 5 0 000 10h10a5 5 0 000-10z"/><path d="M12 12v9"/><path d="M8 21h8"/></svg>',
+  '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L12 14l-2 6h4l2-6"/><path d="M2 2l7.58 7.58"/><circle cx="12" cy="8" r="2"/></svg>',
+]
+
+const missionCards = (about.missionCards || []).map((card: any, i: number) => ({
+  ...card,
+  icon: missionIcons[i % missionIcons.length],
+}))
+
+const defaultMissions = [
+  {title: {id: 'Zero Waste', en: 'Zero Waste'}, description: {id: 'Kemasan 100% dapat terurai dan ramah lingkungan', en: '100% biodegradable and eco-friendly packaging'}, icon: missionIcons[0]},
+  {title: {id: 'Handcrafted', en: 'Handcrafted'}, description: {id: 'Setiap hampers dirangkai dengan tangan penuh cinta', en: 'Every hamper is handcrafted with love and care'}, icon: missionIcons[1]},
+  {title: {id: 'Customizable', en: 'Customizable'}, description: {id: 'Sesuaikan isi dan desain sesuai kebutuhan Anda', en: 'Customize contents and design to suit your needs'}, icon: missionIcons[2]},
+  {title: {id: 'Sustainable', en: 'Sustainable'}, description: {id: 'Mendukung #PlasticFree & #SustainableLiving', en: 'Supporting #PlasticFree & #SustainableLiving'}, icon: missionIcons[3]},
+]
+
+const cards = missionCards.length > 0 ? missionCards : defaultMissions
+---
+<section id="about" class="section about-section">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="badge" data-i18n="about.badge">{about.badge?.id || 'Tentang Kami'}</span>
+      <h2 class="section-title" data-i18n="about.title">{about.title?.id || 'Kopi Pagi Pagi Custom Hampers'}</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-image animate-on-scroll">
+        <img src={aboutImageUrl} alt="About Kopi Pagi Pagi">
+        <div class="about-image-border"></div>
+      </div>
+      <div class="about-text animate-on-scroll">
+        <p data-i18n="about.description1">{about.description1?.id || 'Kami percaya bahwa memberikan hadiah tidak harus merusak lingkungan.'}</p>
+        <p data-i18n="about.description2">{about.description2?.id || 'Setiap hampers kami dikemas dengan material daur ulang dan dapat terurai.'}</p>
+        <div class="mission-grid">
+          {cards.map((card: any) => (
+            <div class="mission-card">
+              <div class="mission-icon" set:html={card.icon} />
+              <h3 data-id={card.title?.id} data-en={card.title?.en}>{card.title?.id}</h3>
+              <p data-id={card.description?.id} data-en={card.description?.en}>{card.description?.id}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

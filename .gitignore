@@ -1,0 +1,22 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# environment
+.env
+.env.local
+.env.production
+
+# legacy files (kept for reference during migration)
+legacy/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# studio
+studio/node_modules/
+studio/dist/

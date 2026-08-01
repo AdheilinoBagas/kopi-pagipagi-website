@@ -1,0 +1,48 @@
+---
+import {urlFor} from '../lib/image'
+
+interface Props {
+  galleryItems: any[]
+}
+
+const {galleryItems = []} = Astro.props
+
+const defaultItems = [
+  {image: null, alt: {id: 'Eco-friendly hampers', en: 'Eco-friendly hampers'}, size: 'large', fallback: '/images/hero.webp'},
+  {image: null, alt: {id: 'Koleksi hampers premium', en: 'Premium hamper collection'}, size: 'normal', fallback: '/images/gallery-1.webp'},
+  {image: null, alt: {id: 'Hampers korporat', en: 'Corporate hampers'}, size: 'normal', fallback: '/images/product-corporate.webp'},
+  {image: null, alt: {id: 'Hampers ulang tahun', en: 'Birthday hampers'}, size: 'normal', fallback: '/images/gallery-2.webp'},
+  {image: null, alt: {id: 'Tumbler bouquet', en: 'Tumbler bouquet'}, size: 'normal', fallback: '/images/product-tumbler.webp'},
+  {image: null, alt: {id: 'Stasiun kemasan sustainable', en: 'Sustainable packaging station'}, size: 'normal', fallback: '/images/gallery-3.webp'},
+  {image: null, alt: {id: 'Hampers pernikahan', en: 'Wedding hampers'}, size: 'normal', fallback: '/images/product-wedding.webp'},
+  {image: null, alt: {id: 'Pengiriman hampers', en: 'Hamper delivery'}, size: 'normal', fallback: '/images/gallery-4.webp'},
+  {image: null, alt: {id: 'Custom branded gift', en: 'Custom branded gift'}, size: 'normal', fallback: '/images/product-custom.webp'},
+]
+
+const items = galleryItems.length > 0 ? galleryItems : defaultItems
+---
+<section id="gallery" class="section gallery-section">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="badge" data-i18n="gallery.badge">Galeri Kami</span>
+      <h2 class="section-title" data-i18n="gallery.title">Inspirasi Hampers Kami</h2>
+      <p class="section-desc" data-i18n="gallery.description">Lihat koleksi karya kami yang telah membawa kebahagiaan ke berbagai acara.</p>
+    </div>
+    <div class="gallery-grid animate-on-scroll">
+      {items.map((item: any) => {
+        const imgUrl = item.image ? urlFor(item.image).width(800).url() : (item.fallback || '/images/hero.webp')
+        const isLarge = item.size === 'large'
+        return (
+          <div class={`gallery-item${isLarge ? ' gallery-item-large' : ''}`} onclick="openLightbox(this)">
+            <img src={imgUrl} alt={item.alt?.id || 'Gallery image'} data-id={item.alt?.id} data-en={item.alt?.en}>
+          </div>
+        )
+      })}
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+  <img src="" alt="Gallery image" id="lightboxImg">
+</div>

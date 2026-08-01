@@ -1,0 +1,57 @@
+---
+import {urlFor} from '../lib/image'
+
+interface Props {
+  siteSettings: any
+}
+
+const {siteSettings} = Astro.props
+const wa = siteSettings?.whatsappNumber || '6281217219682'
+const ig = siteSettings?.instagramHandle || 'kopi.pagipagi'
+const email = siteSettings?.email || 'kopi.bangunpagi@gmail.com'
+const logoUrl = siteSettings?.logo ? urlFor(siteSettings.logo).width(200).url() : '/images/logo.png'
+---
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src={logoUrl} alt="Kopi Pagi Pagi" class="footer-logo">
+        <p data-i18n="footer.tagline">Hampers ramah lingkungan untuk momen spesial Anda.</p>
+        <div class="footer-socials">
+          <a href={`https://wa.me/${wa}`} target="_blank" class="social-link" aria-label="WhatsApp">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          </a>
+          <a href={`https://instagram.com/${ig}`} target="_blank" class="social-link" aria-label="Instagram">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="footer.quickLinks">Tautan Cepat</h4>
+        <a href="#home" data-i18n="nav.home">Beranda</a>
+        <a href="#about" data-i18n="nav.about">Tentang</a>
+        <a href="#products" data-i18n="nav.products">Produk</a>
+        <a href="#gallery" data-i18n="nav.gallery">Galeri</a>
+        <a href="#testimonials" data-i18n="nav.testimonials">Testimoni</a>
+        <a href="#contact" data-i18n="nav.contact">Kontak</a>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="footer.products">Produk</h4>
+        <a href="#products" data-id="Hampers Korporat Premium" data-en="Premium Corporate Hamper">Hampers Korporat Premium</a>
+        <a href="#products" data-id="Tumbler Bouquet" data-en="Tumbler Bouquet">Tumbler Bouquet</a>
+        <a href="#products" data-id="Hampers Pernikahan Elegan" data-en="Elegant Wedding Hamper">Hampers Pernikahan Elegan</a>
+        <a href="#products" data-id="Custom Branded Gift Set" data-en="Custom Branded Gift Set">Custom Branded Gift Set</a>
+      </div>
+      <div class="footer-links">
+        <h4 data-i18n="footer.connect">Terhubung</h4>
+        <a href={`https://wa.me/${wa}`} target="_blank">WhatsApp</a>
+        <a href={`https://instagram.com/${ig}`} target="_blank">@{ig}</a>
+        <a href={`mailto:${email}`}>{email}</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2026 Kopi Pagi Pagi. <span data-i18n="footer.rights">Semua hak dilindungi.</span></p>
+      <p data-i18n="footer.ecoTag">Dibuat dengan 🌿 untuk bumi</p>
+    </div>
+  </div>
+</footer>

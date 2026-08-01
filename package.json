@@ -1,0 +1,19 @@
+{
+  "name": "kopipagipagi",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Kopi Pagi Pagi - Eco-Friendly Custom Hampers",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@sanity/astro": "^3.5.0",
+    "@sanity/client": "^7.6.0",
+    "@sanity/image-url": "^1.1.0",
+    "astro": "^5.11.0",
+    "sanity": "^4.3.0"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "kopipagipagi-studio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "sanity dev",
+    "build": "sanity build",
+    "deploy": "sanity deploy"
+  },
+  "dependencies": {
+    "sanity": "^5.1.0",
+    "styled-components": "^6.4.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}

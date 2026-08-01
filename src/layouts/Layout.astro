@@ -1,0 +1,29 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+const { title = 'Kopi Pagi Pagi — Eco-Friendly Custom Hampers', description = 'Premium eco-friendly custom hampers and gifts. Zero waste, sustainable packaging for corporate and personal gifting.' } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{title}</title>
+  <meta name="description" content={description}>
+  <meta name="keywords" content="hampers, eco-friendly, custom gifts, sustainable, zero waste, corporate gifts, Indonesia">
+  <meta property="og:title" content={title}>
+  <meta property="og:description" content={description}>
+  <link rel="icon" href="/images/icon2.webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <slot />
+  <style is:global>
+    @import '../styles/global.css';
+  </style>
+</body>
+</html>

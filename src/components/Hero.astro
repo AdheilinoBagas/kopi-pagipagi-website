@@ -1,0 +1,51 @@
+---
+import {urlFor} from '../lib/image'
+
+interface Props {
+  heroSection: any
+  siteSettings: any
+}
+
+const {heroSection, siteSettings} = Astro.props
+const hero = heroSection || {}
+const wa = siteSettings?.whatsappNumber || '6281217219682'
+const heroImageUrl = hero.heroImage ? urlFor(hero.heroImage).width(1200).url() : '/images/hero.webp'
+---
+<section id="home" class="hero">
+  <div class="hero-text-side">
+    <div class="hero-content">
+      <span class="badge" data-i18n="hero.badge">🌿 Eco-Friendly Hampers & Gifts</span>
+      <h1 class="hero-title">
+        <span data-i18n="hero.title1">{hero.titleLine1?.id || 'Hadiah yang Hangat di Hati,'}</span><br>
+        <span class="text-primary" data-i18n="hero.title2">{hero.titleLine2?.id || 'Ringan untuk Bumi'}</span>
+      </h1>
+      <p class="hero-desc" data-i18n="hero.description">{hero.description?.id || 'Hampers custom ramah lingkungan dengan kemasan zero waste.'}</p>
+      <div class="hero-ctas">
+        <a href="#products" class="btn btn-primary btn-lg">
+          <span data-i18n="hero.ctaPrimary">Lihat Koleksi</span>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href={`https://wa.me/${wa}?text=Halo%20Kopi%20Pagi%20Pagi%2C%20saya%20tertarik%20dengan%20hampers%20Anda`} target="_blank" class="btn btn-outline-primary btn-lg">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+          <span data-i18n="hero.ctaSecondary">Pesan via WhatsApp</span>
+        </a>
+      </div>
+      <div class="hero-stats">
+        {(hero.stats || []).map((stat: any) => (
+          <div class="hero-stat">{stat.value} <span data-id={stat.label?.id} data-en={stat.label?.en}>{stat.label?.id}</span></div>
+        ))}
+        {(!hero.stats || hero.stats.length === 0) && (
+          <>
+            <div class="hero-stat">500+ <span data-i18n="hero.statLabel1">Hampers Terkirim</span></div>
+            <div class="hero-stat">✨ Fast Custom Service</div>
+            <div class="hero-stat">🎁 Premium Packaging</div>
+            <div class="hero-stat">📦 Bulk Orders Welcome</div>
+          </>
+        )}
+      </div>
+    </div>
+  </div>
+  <div class="hero-image-side">
+    <img src={heroImageUrl} alt="Eco-friendly hampers">
+  </div>
+</section>

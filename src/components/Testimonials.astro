@@ -1,0 +1,48 @@
+---
+interface Props {
+  testimonials: any[]
+}
+
+const {testimonials = []} = Astro.props
+
+const defaultTestimonials = [
+  {quote: {id: 'Rapi banget packagingnya. Bubble wrapnya super rapi.', en: 'The packaging is very neat. The bubble wrap is super tidy.'}, authorName: 'b*****t', avatarLetter: 'B'},
+  {quote: {id: 'makasih admin sdh mau direpotin buat bikin requestn custom form tulisan dll, semuanya keren', en: 'Thank you admin for taking the trouble to make custom form requests, everything is great'}, authorName: 'hayatunthoiyibah', avatarLetter: 'H'},
+  {quote: {id: 'Tulisan sesuai dengan keinginan saya. Respon cepat dan sangat baik.', en: 'The writing matches my wishes. Fast response and very good.'}, authorName: 'wpriyati', avatarLetter: 'W'},
+  {quote: {id: 'sangat puas. pesan untuk acara kantor 30 pcs, barang jadi sesuai desain', en: 'Very satisfied. Ordered for office event 30 pcs, the goods were according to design'}, authorName: 'Bayu', avatarLetter: 'B'},
+  {quote: {id: 'Bagus banget sesuai ekspektasi 👍 Seller nya pun fast respon dan ramah.', en: 'Really good as expected 👍 The seller is fast response and friendly.'}, authorName: 'Astika', avatarLetter: 'A'},
+  {quote: {id: 'Hasilnya bagus sesuai permintaan walau jumlah banyak (quality control ok)', en: 'The results are good as requested even though the quantity is large (quality control ok)'}, authorName: 'R***a', avatarLetter: 'R'},
+]
+
+const items = testimonials.length > 0 ? testimonials : defaultTestimonials
+---
+<section id="testimonials" class="section testimonials-section">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="badge" data-i18n="testimonials.badge">Testimoni</span>
+      <h2 class="section-title" data-i18n="testimonials.title">Apa Kata Mereka?</h2>
+      <p class="section-desc" data-i18n="testimonials.description">Kepuasan pelanggan adalah prioritas utama kami.</p>
+    </div>
+    <div class="testimonial-wrapper">
+      <button class="testimonial-nav testimonial-nav-prev" id="testimonialPrev" aria-label="Previous testimonial" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="testimonial-grid" id="testimonialGrid">
+        {items.map((t: any) => (
+          <div class="testimonial-card animate-on-scroll">
+            <div class="testimonial-stars">★★★★★</div>
+            <div class="testimonial-quote">❝</div>
+            <p data-id={t.quote?.id} data-en={t.quote?.en}>{t.quote?.id}</p>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">{t.avatarLetter || 'A'}</div>
+              <div><strong>{t.authorName}</strong></div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <button class="testimonial-nav testimonial-nav-next" id="testimonialNext" aria-label="Next testimonial" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>

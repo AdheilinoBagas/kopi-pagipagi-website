@@ -1,0 +1,62 @@
+---
+import {urlFor} from '../lib/image'
+
+interface Props {
+  products: any[]
+  categories: any[]
+  siteSettings: any
+}
+
+const {products = [], categories = [], siteSettings} = Astro.props
+const wa = siteSettings?.whatsappNumber || '6281217219682'
+
+const allCategories = [{id: 'all', name: {id: 'Semua', en: 'All'}}, ...categories]
+---
+<section id="products" class="section products-section">
+  <div class="container">
+    <div class="section-header animate-on-scroll">
+      <span class="badge" data-i18n="products.badge">Produk Kami</span>
+      <h2 class="section-title" data-i18n="products.title">Koleksi Hampers Pilihan</h2>
+      <p class="section-desc" data-i18n="products.description">Pilihan hampers terbaik untuk berbagai momen spesial. Semua produk kami menggunakan material ramah lingkungan.</p>
+    </div>
+    <div class="product-filters animate-on-scroll">
+      {allCategories.map((cat: any, i: number) => (
+        <button class={`filter-btn${i === 0 ? ' active' : ''}`} data-filter={cat.id} data-id={cat.name?.id} data-en={cat.name?.en}>{cat.name?.id}</button>
+      ))}
+    </div>
+    <div class="product-carousel">
+      <button class="product-nav product-nav-prev" id="productPrev" aria-label="Previous product" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="product-grid" id="productGrid">
+        {products.map((product: any) => {
+          const imgUrl = product.image ? urlFor(product.image).width(600).url() : '/images/product-corporate.webp'
+          const catSlug = product.category?._ref ? '' : (product.category?.slug?.current || product.category || '')
+          return (
+            <div class="product-card animate-on-scroll" data-category={typeof product.category === 'string' ? product.category : ''}>
+              <div class="product-image">
+                <img src={imgUrl} alt={product.name?.id || 'Product'}>
+                {product.featured && <span class="product-badge">⭐ Featured</span>}
+              </div>
+              <div class="product-body">
+                <h3 class="product-name" data-id={product.name?.id} data-en={product.name?.en}>{product.name?.id}</h3>
+                <p class="product-desc" data-id={product.description?.id} data-en={product.description?.en}>{product.description?.id}</p>
+                <div class="product-price">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                  <span data-i18n="products.startFrom">Mulai dari</span> {product.price}
+                </div>
+                <a href={`https://wa.me/${wa}?text=Halo%20Kopi%20Pagi%20Pagi%2C%20saya%20tertarik%20dengan%20${encodeURIComponent(product.name?.id || '')}`} target="_blank" class="btn btn-primary btn-block">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+                  <span data-i18n="products.orderViaWa">Pesan via WhatsApp</span>
+                </a>
+              </div>
+            </div>
+          )
+        })}
+      </div>
+      <button class="product-nav product-nav-next" id="productNext" aria-label="Next product" type="button">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+  </div>
+</section>
