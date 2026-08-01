@@ -31,9 +31,9 @@ const allCategories = [{id: 'all', name: {id: 'Semua', en: 'All'}}, ...categorie
       <div class="product-grid" id="productGrid">
         {products.map((product: any) => {
           const imgUrl = product.image ? urlFor(product.image).width(600).url() : '/images/product-corporate.webp'
-          const catSlug = product.category?._ref ? '' : (product.category?.slug?.current || product.category || '')
+          const catSlug = product.category?.slug?.current || ''
           return (
-            <div class="product-card animate-on-scroll" data-category={typeof product.category === 'string' ? product.category : ''}>
+            <div class="product-card animate-on-scroll" data-category={catSlug}>
               <div class="product-image">
                 <img src={imgUrl} alt={product.name?.id || 'Product'}>
                 {product.featured && <span class="product-badge">⭐ Featured</span>}

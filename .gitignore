@@ -12,6 +12,7 @@ node_modules/
 
 # legacy files (kept for reference during migration)
 legacy/
+backup-*/
 
 # OS
 .DS_Store
